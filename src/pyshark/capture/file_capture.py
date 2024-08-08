@@ -3,8 +3,6 @@ import pathlib
 from pyshark.capture.capture import Capture
 from pyshark.packet.packet import Packet
 
-READ_BINARY = "rb"
-
 class FileCapture(Capture):
     """A class representing a capture read from a file."""
 
@@ -82,7 +80,7 @@ class FileCapture(Capture):
 
     def _verify_capture_parameters(self):
         try:
-            with self.input_filepath.open(READ_BINARY):
+            with self.input_filepath.open("rb"):
                 pass
         except PermissionError:
             raise PermissionError(f"Permission denied for file {self.input_filepath}")

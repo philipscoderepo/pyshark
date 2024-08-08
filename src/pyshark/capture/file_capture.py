@@ -3,6 +3,7 @@ import pathlib
 from pyshark.capture.capture import Capture
 from pyshark.packet.packet import Packet
 
+
 class FileCapture(Capture):
     """A class representing a capture read from a file."""
 

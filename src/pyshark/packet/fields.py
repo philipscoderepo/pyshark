@@ -3,7 +3,6 @@ import typing
 
 from pyshark.packet.common import Pickleable, SlotsPickleable
 
-
 class LayerField(SlotsPickleable):
     """Holds all data about a field of a layer, both its actual value and its name and nice representation."""
 
